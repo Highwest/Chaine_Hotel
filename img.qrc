@@ -1,0 +1,20 @@
+<RCC>
+    <qresource prefix="/new/img">
+        <file>img/parametre.png</file>
+        <file>img/deconnexion.png</file>
+        <file>img/reservation.png</file>
+        <file>img/HOTEL.png</file>
+        <file>img/CAISSE.png</file>
+        <file>img/service.png</file>
+        <file>img/personnel.png</file>
+        <file>img/clients.png</file>
+        <file>img/waiter.svg</file>
+        <file>img/bell-boy.svg</file>
+        <file>img/PACEM.png</file>
+        <file>img/room-key.svg</file>
+        <file>img/hotel.svg</file>
+        <file>chaine_hotels.db</file>
+    </qresource>
+    <qresource prefix="/Base"/>
+    <qresource prefix="/new/base"/>
+</RCC>
