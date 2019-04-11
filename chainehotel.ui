@@ -696,6 +696,19 @@
       <bool>false</bool>
      </property>
     </widget>
+    <widget class="QLabel" name="label_status">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>347</y>
+       <width>421</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
    </widget>
   </widget>
  </widget>

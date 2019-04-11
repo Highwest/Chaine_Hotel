@@ -2,6 +2,8 @@
 #define TABLEAUDEBORD_H
 
 #include <QMainWindow>
+#include "parametrecourant.h"
+#include "gestionclient.h"
 
 namespace Ui {
 class TableauDeBord;
@@ -26,12 +28,19 @@ private slots:
 
 
 
-    void on_pushButton_clicked();
+
+    void on_pushButton_Deconnexion_clicked();
+
+    void on_pushButton_PramUser_clicked();
+
+    void on_pushButton_GCli_clicked();
 
 private:
 Ui::TableauDeBord *ui;
 QTimer *timer_1s;
 QTimer *timer2;
+ParametreCourant *P;
+GestionClient *GC;
 };
 
 #endif // TABLEAUDEBORD_H

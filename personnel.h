@@ -5,15 +5,18 @@
 
 class personnel : public hoteldb
 {
-int cinp;
-QString login;
-QString password;
-int is_admin;
-int idhotel;
+    int cinp;
+    QString login;
+    QString password;
+    int is_admin;
+    int idhotel;
 public:
     personnel(int,QString,QString,int,int);
     static QString EncryptPassword(QString);
     static QString DecryptPassword(QString);
+    static QString getPassword(QString);
+    static int getCinP(QString);
+    static bool exists(QString);
     static bool Login(QString,QString);
     static int getPrivilege(QString);
     static bool AjoutPersonnel(personnel);

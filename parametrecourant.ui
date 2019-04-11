@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>TableauDeBord</class>
- <widget class="QMainWindow" name="TableauDeBord">
+ <class>ParametreCourant</class>
+ <widget class="QMainWindow" name="ParametreCourant">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -452,547 +452,488 @@
     </disabled>
    </palette>
   </property>
-  <property name="cursor">
-   <cursorShape>PointingHandCursor</cursorShape>
-  </property>
   <property name="windowTitle">
    <string>Hotel PACEL</string>
   </property>
+  <property name="layoutDirection">
+   <enum>Qt::LeftToRight</enum>
+  </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QPushButton" name="pushButton_GCli">
-    <property name="geometry">
-     <rect>
-      <x>21</x>
-      <y>129</y>
-      <width>173</width>
-      <height>173</height>
-     </rect>
-    </property>
-    <property name="toolTip">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Cette bouton vous permet d'acceder à une fenetre afin de gestionner tous les clientrs de l'hotel&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="icon">
-     <iconset resource="img.qrc">
-      <normaloff>:/new/img/img/clients.png</normaloff>:/new/img/img/clients.png</iconset>
-    </property>
-    <property name="iconSize">
-     <size>
-      <width>110</width>
-      <height>110</height>
-     </size>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton_GFac">
-    <property name="geometry">
-     <rect>
-      <x>388</x>
-      <y>130</y>
-      <width>173</width>
-      <height>173</height>
-     </rect>
-    </property>
-    <property name="toolTip">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Cette bouton vous permet d'acceder à une fenetre afin d'ajouter des nouvelles résèrvations des entitées de l'hotel ou découvrir la liste des résèrvation&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="icon">
-     <iconset resource="img.qrc">
-      <normaloff>:/new/img/img/CAISSE.png</normaloff>:/new/img/img/CAISSE.png</iconset>
-    </property>
-    <property name="iconSize">
-     <size>
-      <width>90</width>
-      <height>90</height>
-     </size>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_GCli">
+   <widget class="QPushButton" name="rturnbtn">
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>260</y>
-      <width>171</width>
-      <height>32</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>ABeeZee</family>
-      <weight>75</weight>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="text">
-     <string>Gestion
-Des Clients</string>
-    </property>
-    <property name="textFormat">
-     <enum>Qt::AutoText</enum>
-    </property>
-    <property name="scaledContents">
-     <bool>false</bool>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton_GHot">
-    <property name="geometry">
-     <rect>
-      <x>940</x>
-      <y>130</y>
-      <width>173</width>
-      <height>173</height>
-     </rect>
-    </property>
-    <property name="toolTip">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Cette bouton vous permet d'acceder à une fenetre afin d'ajouter des nouvelles résèrvations des entitées de l'hotel ou découvrir la liste des résèrvation&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="icon">
-     <iconset resource="img.qrc">
-      <normaloff>:/new/img/img/HOTEL.png</normaloff>:/new/img/img/HOTEL.png</iconset>
-    </property>
-    <property name="iconSize">
-     <size>
-      <width>90</width>
-      <height>90</height>
-     </size>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_Date">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>30</y>
-      <width>301</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>ABeeZee</family>
-      <pointsize>16</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_Time">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>60</y>
-      <width>301</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>ABeeZee</family>
-      <pointsize>18</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton_GEnt">
-    <property name="geometry">
-     <rect>
-      <x>755</x>
-      <y>130</y>
-      <width>173</width>
-      <height>173</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="icon">
-     <iconset resource="img.qrc">
-      <normaloff>:/new/img/img/room-key.svg</normaloff>:/new/img/img/room-key.svg</iconset>
-    </property>
-    <property name="iconSize">
-     <size>
+      <y>450</y>
       <width>80</width>
-      <height>80</height>
-     </size>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Retour</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_HotelPACEM">
+   <widget class="QPushButton" name="pushButton">
     <property name="geometry">
      <rect>
-      <x>970</x>
-      <y>440</y>
-      <width>131</width>
+      <x>870</x>
+      <y>410</y>
+      <width>94</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Sauvegarder</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>154</y>
+      <width>391</width>
       <height>20</height>
      </rect>
     </property>
-    <property name="font">
-     <font>
-      <pointsize>14</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">color: rgb(66, 155, 187);
-</string>
-    </property>
     <property name="text">
-     <string>Hotel PACEL</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
-    </property>
-    <property name="wordWrap">
-     <bool>false</bool>
+     <string>Mot de passe incorrecte</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_Deconnexion">
+   <widget class="QLabel" name="label_2">
     <property name="geometry">
      <rect>
-      <x>960</x>
-      <y>30</y>
-      <width>151</width>
-      <height>41</height>
+      <x>370</x>
+      <y>283</y>
+      <width>391</width>
+      <height>20</height>
      </rect>
     </property>
     <property name="text">
-     <string>Déconnexion</string>
-    </property>
-    <property name="icon">
-     <iconset resource="img.qrc">
-      <normaloff>:/new/img/img/deconnexion.png</normaloff>:/new/img/img/deconnexion.png</iconset>
+     <string>Mot de passe incorrecte</string>
     </property>
    </widget>
-   <widget class="QGroupBox" name="groupBox">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>310</y>
-      <width>931</width>
-      <height>151</height>
+      <x>370</x>
+      <y>240</y>
+      <width>391</width>
+      <height>27</height>
      </rect>
     </property>
-    <property name="title">
-     <string/>
-    </property>
-    <widget class="QWidget" name="layoutWidget_3">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>30</y>
-       <width>161</width>
-       <height>111</height>
-      </rect>
-     </property>
-     <layout class="QVBoxLayout" name="verticalLayout_4">
-      <item>
-       <widget class="QLabel" name="label_ShowLocale">
-        <property name="text">
-         <string>Local:</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QLabel" name="label_ShowUser">
-        <property name="text">
-         <string>Utilisateur Courant:</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QLabel" name="label_ShowPrev">
-        <property name="text">
-         <string>Prévilège:</string>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </widget>
-    <widget class="QWidget" name="layoutWidget_4">
-     <property name="geometry">
-      <rect>
-       <x>180</x>
-       <y>30</y>
-       <width>621</width>
-       <height>111</height>
-      </rect>
-     </property>
-     <layout class="QVBoxLayout" name="verticalLayout_5">
-      <item>
-       <widget class="QLabel" name="label_Local">
-        <property name="text">
-         <string>Hotel PACEL - TUNIS</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QLabel" name="label_User">
-        <property name="text">
-         <string>user</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QLabel" name="label_Prev">
-        <property name="text">
-         <string>administrateur/utilisateur</string>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </widget>
+    <layout class="QHBoxLayout" name="horizontalLayout_9">
+     <item>
+      <widget class="QLabel" name="pass1lbl_2">
+       <property name="text">
+        <string>Veuillez saisir votre mot de passe</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="check1_2">
+       <property name="echoMode">
+        <enum>QLineEdit::Password</enum>
+       </property>
+      </widget>
+     </item>
+    </layout>
    </widget>
-   <widget class="QPushButton" name="pushButton_PramUser">
+   <widget class="QLabel" name="label_3">
     <property name="geometry">
      <rect>
-      <x>640</x>
-      <y>30</y>
-      <width>311</width>
-      <height>41</height>
+      <x>370</x>
+      <y>414</y>
+      <width>391</width>
+      <height>20</height>
      </rect>
     </property>
     <property name="text">
-     <string>Paramètre De l'Utilisateur Courant</string>
-    </property>
-    <property name="icon">
-     <iconset resource="img.qrc">
-      <normaloff>:/new/img/img/parametre.png</normaloff>:/new/img/img/parametre.png</iconset>
+     <string>Mot de passe incorrecte</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_GHot">
+   <widget class="QWidget" name="layoutWidget_2">
     <property name="geometry">
      <rect>
-      <x>940</x>
-      <y>260</y>
-      <width>161</width>
-      <height>32</height>
+      <x>370</x>
+      <y>370</y>
+      <width>391</width>
+      <height>27</height>
      </rect>
     </property>
-    <property name="font">
-     <font>
-      <family>ABeeZee</family>
-      <weight>75</weight>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="text">
-     <string>Gestion
-Des Hotels</string>
-    </property>
-    <property name="textFormat">
-     <enum>Qt::AutoText</enum>
-    </property>
-    <property name="scaledContents">
-     <bool>false</bool>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
-    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_10">
+     <item>
+      <widget class="QLabel" name="pass1lbl_3">
+       <property name="text">
+        <string>Veuillez saisir votre mot de passe</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="check1_3">
+       <property name="echoMode">
+        <enum>QLineEdit::Password</enum>
+       </property>
+      </widget>
+     </item>
+    </layout>
    </widget>
-   <widget class="QLabel" name="label_logo">
+   <widget class="QPushButton" name="ok1btn">
     <property name="geometry">
      <rect>
-      <x>960</x>
-      <y>320</y>
-      <width>151</width>
-      <height>121</height>
+      <x>770</x>
+      <y>110</y>
+      <width>91</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>OK</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="ok1btn_2">
+    <property name="geometry">
+     <rect>
+      <x>770</x>
+      <y>240</y>
+      <width>91</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>OK</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="ok1btn_3">
+    <property name="geometry">
+     <rect>
+      <x>770</x>
+      <y>370</y>
+      <width>91</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>OK</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_8">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>31</width>
+      <height>31</height>
      </rect>
     </property>
     <property name="text">
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="img.qrc">:/new/img/img/PACEM.png</pixmap>
+     <pixmap resource="img.qrc">:/new/img/img/parametre.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
     </property>
    </widget>
-   <widget class="QLabel" name="label_GFac">
+   <widget class="QLabel" name="label_9">
     <property name="geometry">
      <rect>
-      <x>390</x>
-      <y>260</y>
-      <width>171</width>
-      <height>32</height>
+      <x>50</x>
+      <y>0</y>
+      <width>181</width>
+      <height>51</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <family>ABeeZee</family>
+      <pointsize>16</pointsize>
       <weight>75</weight>
       <bold>true</bold>
      </font>
     </property>
     <property name="text">
-     <string>Gestion
-Des Factures</string>
-    </property>
-    <property name="textFormat">
-     <enum>Qt::AutoText</enum>
-    </property>
-    <property name="scaledContents">
-     <bool>false</bool>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
+     <string>Vos Paramètres</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_GPer">
+   <widget class="QPushButton" name="pushButton_5">
     <property name="geometry">
      <rect>
-      <x>572</x>
-      <y>130</y>
-      <width>173</width>
-      <height>173</height>
+      <x>870</x>
+      <y>280</y>
+      <width>94</width>
+      <height>25</height>
      </rect>
     </property>
-    <property name="toolTip">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Cette bouton vous permet d'acceder à une fenetre afin d'ajouter des nouvelles résèrvations des entitées de l'hotel ou découvrir la liste des résèrvation&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    <property name="text">
+     <string>Sauvegarder</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="savebtn1">
+    <property name="geometry">
+     <rect>
+      <x>870</x>
+      <y>150</y>
+      <width>94</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Sauvegarder</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_6">
+    <property name="geometry">
+     <rect>
+      <x>600</x>
+      <y>180</y>
+      <width>361</width>
+      <height>17</height>
+     </rect>
     </property>
     <property name="text">
      <string/>
     </property>
-    <property name="icon">
-     <iconset resource="img.qrc">
-      <normaloff>:/new/img/img/bell-boy.svg</normaloff>:/new/img/img/bell-boy.svg</iconset>
-    </property>
-    <property name="iconSize">
-     <size>
-      <width>70</width>
-      <height>70</height>
-     </size>
-    </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_GRes">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
-      <x>205</x>
-      <y>130</y>
-      <width>173</width>
-      <height>173</height>
+      <x>370</x>
+      <y>340</y>
+      <width>391</width>
+      <height>29</height>
      </rect>
     </property>
-    <property name="toolTip">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Cette bouton vous permet d'acceder à une fenetre afin d'ajouter des nouvelles résèrvations des entitées de l'hotel ou découvrir la liste des résèrvation&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    <layout class="QHBoxLayout" name="horizontalLayout_7">
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <widget class="QLabel" name="hotellbl">
+         <property name="text">
+          <string>Hotel</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_12"/>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineEdit_2"/>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_4">
+       <property name="text">
+        <string>modifier</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>150</y>
+      <width>491</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_11">
+     <item>
+      <widget class="QLabel" name="newusrlbl">
+       <property name="text">
+        <string>Veuillez saisir votre nouveau nom d'utilisateur</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="lineEdit_3"/>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>210</y>
+      <width>391</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <item>
+      <widget class="QLabel" name="label_4">
+       <property name="text">
+        <string>Mot de passe</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="lineEdit">
+       <property name="echoMode">
+        <enum>QLineEdit::Password</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_3">
+       <property name="text">
+        <string>modifier</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>110</y>
+      <width>391</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_8">
+     <item>
+      <widget class="QLabel" name="pass1lbl">
+       <property name="text">
+        <string>Veuillez saisir votre mot de passe</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="check1">
+       <property name="echoMode">
+        <enum>QLineEdit::Password</enum>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>80</y>
+      <width>391</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_5">
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_3">
+       <property name="spacing">
+        <number>20</number>
+       </property>
+       <item>
+        <widget class="QLabel" name="userlbl">
+         <property name="text">
+          <string>Nom de l'utilisateur</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="userEdit"/>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <widget class="QPushButton" name="mdfbtn1">
+       <property name="text">
+        <string>modifier</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>280</y>
+      <width>491</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_6">
+     <item>
+      <widget class="QLabel" name="label_7">
+       <property name="text">
+        <string>Veuillez saisir votre nouvelle mot de passe</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="lineEdit_4">
+       <property name="echoMode">
+        <enum>QLineEdit::Password</enum>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>410</y>
+      <width>491</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_13">
+     <item>
+      <widget class="QLabel" name="label_5">
+       <property name="text">
+        <string>Veuillez selecionner votre lieu de travail</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QComboBox" name="comboBox">
+       <property name="editable">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QLabel" name="label_10">
+    <property name="geometry">
+     <rect>
+      <x>600</x>
+      <y>310</y>
+      <width>361</width>
+      <height>20</height>
+     </rect>
     </property>
     <property name="text">
      <string/>
     </property>
-    <property name="icon">
-     <iconset resource="img.qrc">
-      <normaloff>:/new/img/img/reservation.png</normaloff>:/new/img/img/reservation.png</iconset>
-    </property>
-    <property name="iconSize">
-     <size>
-      <width>100</width>
-      <height>100</height>
-     </size>
-    </property>
    </widget>
-   <widget class="QLabel" name="label_GRes">
-    <property name="geometry">
-     <rect>
-      <x>210</x>
-      <y>260</y>
-      <width>161</width>
-      <height>32</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>ABeeZee</family>
-      <weight>75</weight>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="text">
-     <string>Gestion
-Des Résèrvations</string>
-    </property>
-    <property name="textFormat">
-     <enum>Qt::AutoText</enum>
-    </property>
-    <property name="scaledContents">
-     <bool>false</bool>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_GPer">
-    <property name="geometry">
-     <rect>
-      <x>580</x>
-      <y>260</y>
-      <width>161</width>
-      <height>32</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>ABeeZee</family>
-      <weight>75</weight>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="text">
-     <string>Gestion
-Des Personnels</string>
-    </property>
-    <property name="textFormat">
-     <enum>Qt::AutoText</enum>
-    </property>
-    <property name="scaledContents">
-     <bool>false</bool>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_GEnt">
-    <property name="geometry">
-     <rect>
-      <x>760</x>
-      <y>260</y>
-      <width>161</width>
-      <height>32</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>ABeeZee</family>
-      <weight>75</weight>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="text">
-     <string>Gestion
-Des Entitées</string>
-    </property>
-    <property name="textFormat">
-     <enum>Qt::AutoText</enum>
-    </property>
-    <property name="scaledContents">
-     <bool>false</bool>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
-    </property>
-   </widget>
+   <zorder>rturnbtn</zorder>
+   <zorder>pushButton</zorder>
+   <zorder>label</zorder>
+   <zorder>label_2</zorder>
+   <zorder>layoutWidget</zorder>
+   <zorder>label_3</zorder>
+   <zorder>layoutWidget_2</zorder>
+   <zorder>ok1btn</zorder>
+   <zorder>ok1btn_2</zorder>
+   <zorder>ok1btn_3</zorder>
+   <zorder>label_8</zorder>
+   <zorder>label_9</zorder>
+   <zorder>pushButton_5</zorder>
+   <zorder>label_6</zorder>
+   <zorder>layoutWidget</zorder>
+   <zorder>layoutWidget</zorder>
+   <zorder>layoutWidget</zorder>
+   <zorder>layoutWidget</zorder>
+   <zorder>layoutWidget</zorder>
+   <zorder>layoutWidget</zorder>
+   <zorder>layoutWidget</zorder>
+   <zorder>savebtn1</zorder>
+   <zorder>label_10</zorder>
   </widget>
  </widget>
  <resources>

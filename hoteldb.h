@@ -11,6 +11,7 @@ public:
     hoteldb();
     QSqlDatabase DBConnect();
     void DBDisconnect(QSqlDatabase db);
+    static QString Majus(QString);
 };
 
 #endif // HOTELDB_H

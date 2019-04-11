@@ -29,17 +29,25 @@ SOURCES += \
         chainehotel.cpp \
     personnel.cpp \
     hoteldb.cpp \
-    tableaudebord.cpp
+    tableaudebord.cpp \
+    parametrecourant.cpp \
+    hotel.cpp \
+    gestionclient.cpp
 
 HEADERS += \
         chainehotel.h \
     personnel.h \
     hoteldb.h \
-    tableaudebord.h
+    tableaudebord.h \
+    parametrecourant.h \
+    hotel.h \
+    gestionclient.h
 
 FORMS += \
         chainehotel.ui \
-    tableaudebord.ui
+    tableaudebord.ui \
+    parametrecourant.ui \
+    gestionclient.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

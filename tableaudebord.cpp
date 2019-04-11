@@ -88,13 +88,33 @@ void TableauDeBord::UpdateTime()
 }
 void TableauDeBord::UpdateDate()
 {
-    ui->label_Date->setText(QDate::longDayName(QDate::currentDate().dayOfWeek())+" "+QDate::currentDate().toString("dd")+" "+QDate::longMonthName(QDate::currentDate().month())+" "+QDate::currentDate().toString("yyyy")+",");
+    QString day = hoteldb::Majus(QDate::longDayName(QDate::currentDate().dayOfWeek()));
+    QString month = hoteldb::Majus(QDate::longMonthName(QDate::currentDate().month()));
+    ui->label_Date->setText(day+" "+QDate::currentDate().toString("dd")+" "+month+" "+QDate::currentDate().toString("yyyy")+",");
 }
 
 
-void TableauDeBord::on_pushButton_clicked()
+
+void TableauDeBord::on_pushButton_Deconnexion_clicked()
 {
     ChaineHotel *C = new ChaineHotel(this);
     C->show();
+    hide();
+}
+
+void TableauDeBord::on_pushButton_PramUser_clicked()
+{
+    ParametreCourant *P = new ParametreCourant(this);
+    P->setusername(ui->label_User->text());
+    P->setuserhotel(ui->label_Local->text());
+    P->setuserpass(ui->label_User->text());
+    P->show();
+    hide();
+}
+
+void TableauDeBord::on_pushButton_GCli_clicked()
+{
+    GC = new GestionClient(this);
+    GC->show();
     hide();
 }

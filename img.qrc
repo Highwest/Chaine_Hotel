@@ -14,7 +14,11 @@
         <file>img/room-key.svg</file>
         <file>img/hotel.svg</file>
         <file>chaine_hotels.db</file>
+        <file>img/Add_User-80_icon-icons.com_57380.svg</file>
+        <file>img/Edit_User-80_icon-icons.com_57329.svg</file>
+        <file>img/Remove_User-80_icon-icons.com_57283.svg</file>
     </qresource>
     <qresource prefix="/Base"/>
     <qresource prefix="/new/base"/>
+    <qresource prefix="/"/>
 </RCC>
