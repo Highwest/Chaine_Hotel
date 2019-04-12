@@ -7,7 +7,7 @@ hoteldb::hoteldb()
 QSqlDatabase hoteldb::DBConnect()
 {
     QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
-    db.setDatabaseName("/home/mehdi/chaine_hotels");
+    db.setDatabaseName("/home/pouretudes/qtProjects/Chaine_Hotel/chaine_hotels.db");
     if(db.isOpen()){
         qDebug() << "DB OPENED";
         return db;

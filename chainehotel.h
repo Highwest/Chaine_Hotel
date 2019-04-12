@@ -1,6 +1,5 @@
 #ifndef CHAINEHOTEL_H
 #define CHAINEHOTEL_H
-
 #include <QMainWindow>
 #include "tableaudebord.h"
 

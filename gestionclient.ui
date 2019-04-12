@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1130</width>
-    <height>493</height>
+    <height>502</height>
    </rect>
   </property>
   <property name="palette">
@@ -456,116 +456,181 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QTableWidget" name="tableWidget">
+   <widget class="QGroupBox" name="groupBox_2">
     <property name="geometry">
      <rect>
-      <x>280</x>
-      <y>120</y>
-      <width>841</width>
-      <height>301</height>
+      <x>110</x>
+      <y>10</y>
+      <width>771</width>
+      <height>101</height>
      </rect>
     </property>
+    <property name="title">
+     <string>RECHERCHE</string>
+    </property>
+    <widget class="QWidget" name="layoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>30</y>
+       <width>751</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayoutsearch">
+      <item>
+       <widget class="QLineEdit" name="lineEditsearch"/>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButtonsearch">
+        <property name="text">
+         <string>Recherche</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QWidget" name="layoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>60</y>
+       <width>216</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayoutchoix">
+      <item>
+       <widget class="QCheckBox" name="checkBoxcin">
+        <property name="text">
+         <string>CIN</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="checkBoxprenom">
+        <property name="text">
+         <string>Nom</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="checkBoxnom">
+        <property name="text">
+         <string>Prenom</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
    </widget>
-   <widget class="QPushButton" name="pushButtonsearch">
+   <widget class="QGroupBox" name="groupBox_3">
     <property name="geometry">
      <rect>
-      <x>170</x>
-      <y>40</y>
-      <width>89</width>
-      <height>25</height>
+      <x>20</x>
+      <y>100</y>
+      <width>941</width>
+      <height>371</height>
      </rect>
     </property>
-    <property name="text">
-     <string>Recherche</string>
+    <property name="title">
+     <string/>
     </property>
+    <widget class="QTableWidget" name="tableWidget">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>30</y>
+       <width>921</width>
+       <height>331</height>
+      </rect>
+     </property>
+    </widget>
    </widget>
-   <widget class="QPushButton" name="pushButtonadd">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
-      <x>40</x>
+      <x>970</x>
       <y>130</y>
-      <width>201</width>
-      <height>71</height>
+      <width>147</width>
+      <height>141</height>
      </rect>
     </property>
-    <property name="text">
-     <string>  Ajouter un client</string>
-    </property>
-    <property name="icon">
-     <iconset resource="img.qrc">
-      <normaloff>:/new/img/img/Add_User-80_icon-icons.com_57380.svg</normaloff>:/new/img/img/Add_User-80_icon-icons.com_57380.svg</iconset>
-    </property>
-    <property name="iconSize">
-     <size>
-      <width>100</width>
-      <height>50</height>
-     </size>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButtondelete">
-    <property name="geometry">
-     <rect>
-      <x>40</x>
-      <y>230</y>
-      <width>201</width>
-      <height>71</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string> Supprimer un client</string>
-    </property>
-    <property name="icon">
-     <iconset resource="img.qrc">
-      <normaloff>:/new/img/img/Remove_User-80_icon-icons.com_57283.svg</normaloff>:/new/img/img/Remove_User-80_icon-icons.com_57283.svg</iconset>
-    </property>
-    <property name="iconSize">
-     <size>
-      <width>100</width>
-      <height>50</height>
-     </size>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButtonedit">
-    <property name="geometry">
-     <rect>
-      <x>40</x>
-      <y>330</y>
-      <width>201</width>
-      <height>71</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string> Modifier un client</string>
-    </property>
-    <property name="icon">
-     <iconset resource="img.qrc">
-      <normaloff>:/new/img/img/Edit_User-80_icon-icons.com_57329.svg</normaloff>:/new/img/img/Edit_User-80_icon-icons.com_57329.svg</iconset>
-    </property>
-    <property name="iconSize">
-     <size>
-      <width>100</width>
-      <height>50</height>
-     </size>
-    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QPushButton" name="pushButton_Add">
+       <property name="text">
+        <string>    Ajouter      </string>
+       </property>
+       <property name="icon">
+        <iconset resource="img.qrc">
+         <normaloff>:/new/img/img/Add_User-80_icon-icons.com_57380.svg</normaloff>:/new/img/img/Add_User-80_icon-icons.com_57380.svg</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>35</width>
+         <height>35</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_Edit">
+       <property name="text">
+        <string>   Modifier    </string>
+       </property>
+       <property name="icon">
+        <iconset resource="img.qrc">
+         <normaloff>:/new/img/img/Edit_User-80_icon-icons.com_57329.svg</normaloff>:/new/img/img/Edit_User-80_icon-icons.com_57329.svg</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>35</width>
+         <height>35</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_Delete">
+       <property name="text">
+        <string>   Supprimer</string>
+       </property>
+       <property name="icon">
+        <iconset resource="img.qrc">
+         <normaloff>:/new/img/img/Remove_User-80_icon-icons.com_57283.svg</normaloff>:/new/img/img/Remove_User-80_icon-icons.com_57283.svg</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>35</width>
+         <height>35</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+    </layout>
    </widget>
    <widget class="QGroupBox" name="groupBox">
     <property name="geometry">
      <rect>
-      <x>830</x>
-      <y>10</y>
-      <width>291</width>
+      <x>890</x>
+      <y>30</y>
+      <width>231</width>
       <height>80</height>
      </rect>
     </property>
     <property name="title">
      <string>Information de la session</string>
     </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
     <widget class="QLabel" name="labeluser">
      <property name="geometry">
       <rect>
-       <x>11</x>
+       <x>10</x>
        <y>31</y>
-       <width>126</width>
+       <width>151</width>
        <height>17</height>
       </rect>
      </property>
@@ -576,9 +641,9 @@
     <widget class="QLabel" name="labelprivilege">
      <property name="geometry">
       <rect>
-       <x>11</x>
+       <x>10</x>
        <y>51</y>
-       <width>67</width>
+       <width>141</width>
        <height>17</height>
       </rect>
      </property>
@@ -589,9 +654,9 @@
     <widget class="QLabel" name="labelusr">
      <property name="geometry">
       <rect>
-       <x>143</x>
+       <x>162</x>
        <y>31</y>
-       <width>30</width>
+       <width>41</width>
        <height>17</height>
       </rect>
      </property>
@@ -602,7 +667,7 @@
     <widget class="QLabel" name="labeladm">
      <property name="geometry">
       <rect>
-       <x>87</x>
+       <x>100</x>
        <y>51</y>
        <width>171</width>
        <height>17</height>
@@ -613,97 +678,41 @@
      </property>
     </widget>
    </widget>
-   <widget class="QPushButton" name="pushButtonrturn">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>440</y>
-      <width>101</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Retour</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label">
-    <property name="geometry">
-     <rect>
-      <x>290</x>
-      <y>100</y>
-      <width>521</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>status</string>
-    </property>
-   </widget>
-   <widget class="QWidget" name="">
-    <property name="geometry">
-     <rect>
-      <x>270</x>
-      <y>10</y>
-      <width>211</width>
-      <height>51</height>
-     </rect>
-    </property>
-    <layout class="QVBoxLayout" name="verticalLayout">
-     <item>
-      <widget class="QLabel" name="labelchoix">
-       <property name="text">
-        <string>Rechercher par :</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <layout class="QHBoxLayout" name="horizontalLayoutchoix">
-       <item>
-        <widget class="QCheckBox" name="checkBoxcin">
-         <property name="text">
-          <string>CIN</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QCheckBox" name="checkBoxprenom">
-         <property name="text">
-          <string>Nom</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QCheckBox" name="checkBoxnom">
-         <property name="text">
-          <string>Prenom</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </item>
-    </layout>
-   </widget>
-   <widget class="QWidget" name="">
+   <widget class="QPushButton" name="pushButton">
     <property name="geometry">
      <rect>
       <x>30</x>
-      <y>10</y>
-      <width>229</width>
-      <height>27</height>
+      <y>30</y>
+      <width>71</width>
+      <height>71</height>
      </rect>
     </property>
-    <layout class="QHBoxLayout" name="horizontalLayoutsearch">
-     <item>
-      <widget class="QLabel" name="searchlbl">
-       <property name="text">
-        <string>Recherche :</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLineEdit" name="lineEditsearch"/>
-     </item>
-    </layout>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset resource="img.qrc">
+      <normaloff>:/new/img/img/home-icon.png</normaloff>:/new/img/img/home-icon.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>60</width>
+      <height>60</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_status">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>470</y>
+      <width>671</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>test</string>
+    </property>
    </widget>
   </widget>
  </widget>

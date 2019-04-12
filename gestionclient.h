@@ -15,6 +15,9 @@ public:
     explicit GestionClient(QWidget *parent = nullptr);
     ~GestionClient();
 
+private slots:
+    void on_pushButton_clicked();
+
 private:
     Ui::GestionClient *ui;
 };
