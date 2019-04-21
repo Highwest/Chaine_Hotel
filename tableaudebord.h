@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include "parametrecourant.h"
 #include "gestionclient.h"
+#include "gestionpersonnel.h"
 
 namespace Ui {
 class TableauDeBord;
@@ -35,12 +36,15 @@ private slots:
 
     void on_pushButton_GCli_clicked();
 
+    void on_pushButton_GPer_clicked();
+
 private:
 Ui::TableauDeBord *ui;
 QTimer *timer_1s;
 QTimer *timer2;
 ParametreCourant *P;
 GestionClient *GC;
+gestionpersonnel *GP;
 };
 
 #endif // TABLEAUDEBORD_H

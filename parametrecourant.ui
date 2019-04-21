@@ -911,6 +911,19 @@
      <string/>
     </property>
    </widget>
+   <widget class="QLabel" name="label_11">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>416</y>
+      <width>511</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Vous n'avez pas la permission de changer cette information</string>
+    </property>
+   </widget>
    <zorder>rturnbtn</zorder>
    <zorder>pushButton</zorder>
    <zorder>label</zorder>
@@ -934,6 +947,7 @@
    <zorder>layoutWidget</zorder>
    <zorder>savebtn1</zorder>
    <zorder>label_10</zorder>
+   <zorder>label_11</zorder>
   </widget>
  </widget>
  <resources>

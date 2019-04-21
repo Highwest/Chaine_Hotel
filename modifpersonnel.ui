@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>GestionClient</class>
- <widget class="QMainWindow" name="GestionClient">
+ <class>modifpersonnel</class>
+ <widget class="QMainWindow" name="modifpersonnel">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -456,172 +456,11 @@
    <string>Hotel PACEL</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QGroupBox" name="groupBox_2">
-    <property name="geometry">
-     <rect>
-      <x>110</x>
-      <y>10</y>
-      <width>771</width>
-      <height>101</height>
-     </rect>
-    </property>
-    <property name="title">
-     <string>RECHERCHE</string>
-    </property>
-    <widget class="QWidget" name="layoutWidget">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>30</y>
-       <width>751</width>
-       <height>30</height>
-      </rect>
-     </property>
-     <layout class="QHBoxLayout" name="horizontalLayoutsearch">
-      <item>
-       <widget class="QLineEdit" name="lineEditsearch"/>
-      </item>
-      <item>
-       <widget class="QPushButton" name="pushButtonsearch">
-        <property name="text">
-         <string>Recherche</string>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </widget>
-    <widget class="QWidget" name="layoutWidget">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>60</y>
-       <width>424</width>
-       <height>28</height>
-      </rect>
-     </property>
-     <layout class="QHBoxLayout" name="horizontalLayoutchoix">
-      <item>
-       <widget class="QCheckBox" name="checkBoxnom">
-        <property name="text">
-         <string>Nom</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QCheckBox" name="checkBoxprenom">
-        <property name="text">
-         <string>Prenom</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QCheckBox" name="checkBoxnum">
-        <property name="text">
-         <string>Numéro de téléphone</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QCheckBox" name="checkBoxadr">
-        <property name="text">
-         <string>Adresse</string>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </widget>
-   </widget>
-   <widget class="QGroupBox" name="groupBox_3">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>100</y>
-      <width>941</width>
-      <height>371</height>
-     </rect>
-    </property>
-    <property name="title">
-     <string/>
-    </property>
-    <widget class="QTableView" name="tableView">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>30</y>
-       <width>921</width>
-       <height>331</height>
-      </rect>
-     </property>
-    </widget>
-   </widget>
-   <widget class="QWidget" name="layoutWidget">
-    <property name="geometry">
-     <rect>
-      <x>970</x>
-      <y>130</y>
-      <width>147</width>
-      <height>141</height>
-     </rect>
-    </property>
-    <layout class="QVBoxLayout" name="verticalLayout">
-     <item>
-      <widget class="QPushButton" name="pushButton_Add">
-       <property name="text">
-        <string>    Ajouter      </string>
-       </property>
-       <property name="icon">
-        <iconset resource="img.qrc">
-         <normaloff>:/new/img/img/Add_User-80_icon-icons.com_57380.svg</normaloff>:/new/img/img/Add_User-80_icon-icons.com_57380.svg</iconset>
-       </property>
-       <property name="iconSize">
-        <size>
-         <width>35</width>
-         <height>35</height>
-        </size>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QPushButton" name="pushButton_Edit">
-       <property name="text">
-        <string>   Modifier    </string>
-       </property>
-       <property name="icon">
-        <iconset resource="img.qrc">
-         <normaloff>:/new/img/img/Edit_User-80_icon-icons.com_57329.svg</normaloff>:/new/img/img/Edit_User-80_icon-icons.com_57329.svg</iconset>
-       </property>
-       <property name="iconSize">
-        <size>
-         <width>35</width>
-         <height>35</height>
-        </size>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QPushButton" name="pushButton_Delete">
-       <property name="text">
-        <string>   Supprimer</string>
-       </property>
-       <property name="icon">
-        <iconset resource="img.qrc">
-         <normaloff>:/new/img/img/Remove_User-80_icon-icons.com_57283.svg</normaloff>:/new/img/img/Remove_User-80_icon-icons.com_57283.svg</iconset>
-       </property>
-       <property name="iconSize">
-        <size>
-         <width>35</width>
-         <height>35</height>
-        </size>
-       </property>
-      </widget>
-     </item>
-    </layout>
-   </widget>
    <widget class="QGroupBox" name="groupBox">
     <property name="geometry">
      <rect>
-      <x>890</x>
-      <y>30</y>
+      <x>880</x>
+      <y>10</y>
       <width>231</width>
       <height>80</height>
      </rect>
@@ -662,9 +501,9 @@
      <property name="geometry">
       <rect>
        <x>140</x>
-       <y>30</y>
+       <y>29</y>
        <width>81</width>
-       <height>17</height>
+       <height>21</height>
       </rect>
      </property>
      <property name="text">
@@ -676,7 +515,7 @@
       <rect>
        <x>80</x>
        <y>50</y>
-       <width>181</width>
+       <width>191</width>
        <height>20</height>
       </rect>
      </property>
@@ -685,46 +524,248 @@
      </property>
     </widget>
    </widget>
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QLabel" name="labelstsglb">
     <property name="geometry">
      <rect>
-      <x>30</x>
-      <y>30</y>
-      <width>71</width>
-      <height>71</height>
+      <x>410</x>
+      <y>430</y>
+      <width>331</width>
+      <height>17</height>
      </rect>
     </property>
     <property name="text">
      <string/>
-    </property>
-    <property name="icon">
-     <iconset resource="img.qrc">
-      <normaloff>:/new/img/img/home-icon.png</normaloff>:/new/img/img/home-icon.png</iconset>
-    </property>
-    <property name="iconSize">
-     <size>
-      <width>60</width>
-      <height>60</height>
-     </size>
     </property>
    </widget>
-   <widget class="QLabel" name="label_status">
+   <widget class="QPushButton" name="pushButtonrtr">
     <property name="geometry">
      <rect>
-      <x>30</x>
-      <y>470</y>
-      <width>671</width>
-      <height>31</height>
+      <x>730</x>
+      <y>430</y>
+      <width>89</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Retour</string>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="groupBoxform">
+    <property name="geometry">
+     <rect>
+      <x>360</x>
+      <y>190</y>
+      <width>431</width>
+      <height>191</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Saisissez les nouvelles valeurs</string>
+    </property>
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="0" column="0" colspan="3">
+      <widget class="QLabel" name="labelcinn">
+       <property name="text">
+        <string>CIN/Num de passeport :</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="3" colspan="2">
+      <widget class="QLineEdit" name="lineEditcin"/>
+     </item>
+     <item row="1" column="0" colspan="3">
+      <widget class="QLabel" name="labelnomn">
+       <property name="text">
+        <string>Nom de l'utilisateur :</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="3" colspan="2">
+      <widget class="QLineEdit" name="lineEditnom"/>
+     </item>
+     <item row="2" column="0" colspan="2">
+      <widget class="QLabel" name="labelprenomn">
+       <property name="text">
+        <string>Mot de passe :</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="3" colspan="2">
+      <widget class="QLineEdit" name="lineEditprenom">
+       <property name="echoMode">
+        <enum>QLineEdit::Password</enum>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="0">
+      <widget class="QLabel" name="labelnumn">
+       <property name="text">
+        <string>Privilege :</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="1" colspan="3">
+      <widget class="QRadioButton" name="radioButtonad">
+       <property name="text">
+        <string>Administrateur</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="4">
+      <widget class="QRadioButton" name="radioButtonun">
+       <property name="text">
+        <string>Utilisateur Normal</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="0" colspan="2">
+      <widget class="QLabel" name="labeladrn">
+       <property name="text">
+        <string>Lieu de travail :</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="2" colspan="3">
+      <widget class="QComboBox" name="comboBox"/>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QGroupBox" name="groupBoxoldinfo">
+    <property name="geometry">
+     <rect>
+      <x>360</x>
+      <y>10</y>
+      <width>431</width>
+      <height>181</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Les informations courrantes :</string>
+    </property>
+    <layout class="QGridLayout" name="gridLayout_2">
+     <item row="2" column="5">
+      <widget class="QPushButton" name="pushButton">
+       <property name="text">
+        <string>Afficher</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="0">
+      <widget class="QLabel" name="labelnumv">
+       <property name="text">
+        <string>Privilege :</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="labelprenomv">
+       <property name="text">
+        <string>Mot de passe :</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1" colspan="4">
+      <widget class="QLabel" name="labelinfo3">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="0">
+      <widget class="QLabel" name="labeladrv">
+       <property name="text">
+        <string>Lieu de travail :</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="1" colspan="5">
+      <widget class="QLabel" name="labelinfo5">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="1" colspan="5">
+      <widget class="QLabel" name="labelinfo4">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="labelnomv">
+       <property name="text">
+        <string>Nom de l'utilisateur :</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1" colspan="5">
+      <widget class="QLabel" name="labelinfo2">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QLabel" name="labelcinv">
+       <property name="text">
+        <string>CIN/Num de passeport :</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1" colspan="5">
+      <widget class="QLabel" name="labelinfo1">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QPushButton" name="pushButtonsave">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>430</y>
+      <width>89</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Enregistrer</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButtondelete">
+    <property name="geometry">
+     <rect>
+      <x>530</x>
+      <y>430</y>
+      <width>89</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Effacer</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelstatus">
+    <property name="geometry">
+     <rect>
+      <x>250</x>
+      <y>390</y>
+      <width>641</width>
+      <height>20</height>
      </rect>
     </property>
     <property name="text">
      <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
     </property>
    </widget>
   </widget>
  </widget>
- <resources>
-  <include location="img.qrc"/>
- </resources>
+ <resources/>
  <connections/>
 </ui>

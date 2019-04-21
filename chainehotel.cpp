@@ -37,6 +37,7 @@ void ChaineHotel::on_pushButton_connexion_clicked()
     QSqlDatabase conn = db->DBConnect();
 
     if(personnel::Login(username,password)){
+        personnel::WriteToLogFile("["+QDateTime::currentDateTime().toString("dd-MM-yyyy  HH:mm:ss")+"] Ouverture de Connexion par "+username);
     D = new TableauDeBord(this);
     D->setUserLabel(username);
     D->setPrivilegeLabel(username,password);

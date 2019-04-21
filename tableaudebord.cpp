@@ -7,6 +7,7 @@
 #include <QTimer>
 #include <QTime>
 
+
 TableauDeBord::TableauDeBord(QWidget *parent) :
 QMainWindow(parent),
 ui(new Ui::TableauDeBord)
@@ -98,6 +99,7 @@ void TableauDeBord::UpdateDate()
 void TableauDeBord::on_pushButton_Deconnexion_clicked()
 {
     ChaineHotel *C = new ChaineHotel(this);
+    personnel::WriteToLogFile("["+QDateTime::currentDateTime().toString("dd-MM-yyyy  HH:mm:ss")+"] Fermeture de Connexion par "+ui->label_User->text());
     C->show();
     hide();
 }
@@ -108,6 +110,7 @@ void TableauDeBord::on_pushButton_PramUser_clicked()
     P->setusername(ui->label_User->text());
     P->setuserhotel(ui->label_Local->text());
     P->setuserpass(ui->label_User->text());
+    personnel::WriteToLogFile("["+QDateTime::currentDateTime().toString("dd-MM-yyyy  HH:mm:ss")+"] Accés aux paramétre du compte courant par "+ui->label_User->text());
     P->show();
     hide();
 }
@@ -115,6 +118,19 @@ void TableauDeBord::on_pushButton_PramUser_clicked()
 void TableauDeBord::on_pushButton_GCli_clicked()
 {
     GC = new GestionClient(this);
+    GC->setLabelusr(ui->label_User->text());
+    GC->setLabeladm(ui->label_Prev->text());
+    personnel::WriteToLogFile("["+QDateTime::currentDateTime().toString("dd-MM-yyyy  HH:mm:ss")+"] Accés au gestionnaire des clients par "+ui->label_User->text());
     GC->show();
+    hide();
+}
+
+void TableauDeBord::on_pushButton_GPer_clicked()
+{
+    GP = new gestionpersonnel(this);
+    GP->setLabelusr(ui->label_User->text());
+    GP->setLabeladm(ui->label_Prev->text());
+    personnel::WriteToLogFile("["+QDateTime::currentDateTime().toString("dd-MM-yyyy  HH:mm:ss")+"] Accés au gestionnaire des personnels par "+ui->label_User->text());
+    GP->show();
     hide();
 }

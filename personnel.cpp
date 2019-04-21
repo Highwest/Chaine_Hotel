@@ -1,6 +1,6 @@
 #include "personnel.h"
 
-personnel::personnel(int cinp,QString login,QString password,int is_admin,int idhotel)
+personnel::personnel(QString cinp,QString login,QString password,int is_admin,int idhotel)
 {
     this->cinp = cinp;
     this->login = login;
@@ -32,6 +32,7 @@ QString personnel::EncryptPassword(QString pass){
     return rslt;
 
 }
+
 
 QString personnel::DecryptPassword(QString pass){
 
@@ -71,16 +72,16 @@ QString personnel::getPassword(QString n){
     }
     return "No PASSWORD";
 }
-int personnel::getCinP(QString n){
+QString personnel::getCinP(QString n){
     QSqlQuery qrry;
     QString q ="SELECT cinP FROM personnel WHERE login = :l";
     qrry.prepare(q);
     qrry.bindValue(":l",n);
     bool rslt = qrry.exec();
     if(rslt && qrry.next()){
-        return qrry.value(0).toInt();
+        return qrry.value(0).toString();
     }
-    return -1;
+    return "no cin";
 }
 bool personnel::exists(QString n){
     QSqlQuery qrry;
@@ -100,7 +101,7 @@ bool personnel::exists(QString n){
     }
 
 }
-bool personnel::ModifPersonnelLogin(int id,QString l){
+bool personnel::ModifPersonnelLogin(QString id,QString l){
     QSqlQuery check;
     QString q1 = "SELECT * FROM personnel WHERE cinP = :id";
     check.prepare(q1);
@@ -123,7 +124,7 @@ bool personnel::ModifPersonnelLogin(int id,QString l){
     return false;
     }
 }
-bool personnel::ModifPersonnelPassword(int id,QString l){
+bool personnel::ModifPersonnelPassword(QString id,QString l){
     QSqlQuery check;
     QString q1 = "SELECT * FROM personnel WHERE cinP = :id";
     check.prepare(q1);
@@ -146,7 +147,7 @@ bool personnel::ModifPersonnelPassword(int id,QString l){
     return false;
     }
 }
-bool personnel::ModifPersonnelHotel(int id,int idh){
+bool personnel::ModifPersonnelHotel(QString id,int idh){
     QSqlQuery check;
     QString q1 = "SELECT * FROM personnel WHERE cinP = :id";
     check.prepare(q1);
@@ -161,6 +162,111 @@ bool personnel::ModifPersonnelHotel(int id,int idh){
     QString q2 = "UPDATE personnel SET idhotel = :l WHERE cinP = :id";
     qrry.prepare(q2);
     qrry.bindValue(":l",idh);
+    qrry.bindValue(":id",id);
+    bool rslt = qrry.exec();
+    return rslt;
+    }
+    else {
+    return false;
+    }
+}
+int personnel::getPrivilege(QString id){
+    int val;
+    if(personnel::Login(id,personnel::getPassword(id))){
+        QSqlQuery qrry;
+        QString q ="SELECT is_admin FROM personnel WHERE login = :l AND password = :p";
+        qrry.prepare(q);
+        qrry.bindValue(":l",id);
+        qrry.bindValue(":p",personnel::EncryptPassword(personnel::getPassword(id)));
+        bool rslt = qrry.exec();
+        if(rslt && qrry.next()){
+            val = qrry.value(0).toInt();
+            qDebug()<< val;
+        }
+        return val;
+
+
+    }
+}
+bool personnel::SuppPersonnel(QString id){
+    QSqlQuery check;
+    QString q1 = "SELECT * FROM personnel WHERE cinP = :id";
+    check.prepare(q1);
+    check.bindValue(":id",id);
+    check.exec();
+    int nbrecords = 0;
+    while(check.next()){
+        nbrecords++;
+    }
+    if((nbrecords!=0) && (nbrecords==1)){
+    QSqlQuery qrry;
+    QString q2 = "DELETE FROM personnel WHERE cinP = :id";
+    qrry.prepare(q2);
+    qrry.bindValue(":id",id);
+    bool rslt = qrry.exec();
+    return rslt;
+    }
+    else {
+    return false;
+    }
+}
+bool personnel::existsbycin(QString n){
+    QSqlQuery qrry;
+    int nb=0;
+    QString q ="SELECT * FROM personnel WHERE cinP = :l";
+    qrry.prepare(q);
+    qrry.bindValue(":l",n);
+    bool rslt = qrry.exec();
+    while(rslt && qrry.next()){
+          nb++;
+    }
+    if(nb==0){
+        return false;
+    }
+    else {
+        return true;
+    }
+
+
+}
+bool personnel::ModifPersonnelCin(QString id,QString l){
+    QSqlQuery check;
+    QString q1 = "SELECT * FROM personnel WHERE cinP = :id";
+    check.prepare(q1);
+    check.bindValue(":id",id);
+    check.exec();
+    int nbrecords = 0;
+    while(check.next()){
+        nbrecords++;
+    }
+    if((nbrecords!=0) && (nbrecords==1)){
+    QSqlQuery qrry;
+    QString q2 = "UPDATE personnel SET cinP = :l WHERE cinP = :id";
+    qrry.prepare(q2);
+    qrry.bindValue(":l",l);
+    qrry.bindValue(":id",id);
+    bool rslt = qrry.exec();
+    return rslt;
+    }
+    else {
+    return false;
+    }
+}
+bool personnel::ModifPersonnelAdmin(QString id,int l){
+    QSqlQuery check;
+    QString q1 = "SELECT * FROM personnel WHERE cinP = :id";
+    check.prepare(q1);
+    check.bindValue(":id",id);
+    check.exec();
+    int nbrecords = 0;
+    while(check.next()){
+        nbrecords++;
+    }
+    if((nbrecords!=0) && (nbrecords==1)){
+    QSqlQuery qrry;
+    QString q2 = "UPDATE personnel SET is_admin = :l WHERE cinP = :id";
+    qrry.prepare(q2);
+    qrry.bindValue(":l",l);
     qrry.bindValue(":id",id);
     bool rslt = qrry.exec();
     return rslt;

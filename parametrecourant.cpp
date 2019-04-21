@@ -10,6 +10,8 @@ ParametreCourant::ParametreCourant(QWidget *parent) :
     ui(new Ui::ParametreCourant)
 {
     ui->setupUi(this);
+    ui->label_11->hide();
+    ui->label_11->setStyleSheet("QLabel { color : red; }");
     ui->label_10->setStyleSheet("QLabel { color : red; }");
     ui->label_6->setStyleSheet("QLabel { color : red; }");
     ui->userEdit->setEnabled(false);
@@ -99,7 +101,7 @@ void ParametreCourant::on_savebtn1_clicked()
     }
     else {
         if(!personnel::exists(ui->lineEdit_3->text())){
-        int id = personnel::getCinP(ui->userEdit->text());
+        QString id = personnel::getCinP(ui->userEdit->text());
         bool rslt = personnel::ModifPersonnelLogin(id,ui->lineEdit_3->text());
         if(rslt){
             ui->label_6->hide();
@@ -157,7 +159,7 @@ void ParametreCourant::on_pushButton_5_clicked()
         ui->label_10->show();
     }
     else {
-        int id = personnel::getCinP(ui->userEdit->text());
+        QString id = personnel::getCinP(ui->userEdit->text());
         bool rslt = personnel::ModifPersonnelPassword(id,ui->lineEdit_4->text());
         if(rslt){
         ui->label_10->hide();
@@ -175,9 +177,19 @@ void ParametreCourant::on_pushButton_5_clicked()
 
 void ParametreCourant::on_pushButton_4_clicked()
 {
+    hoteldb *db = new hoteldb();
+    QSqlDatabase conn = db->DBConnect();
+    ui->label_11->hide();
+    if(personnel::getPrivilege(ui->userEdit->text())==1){
+    ui->label_11->hide();
     ui->pass1lbl_3->show();
     ui->check1_3->show();
     ui->ok1btn_3->show();
+    }
+    else {
+    ui->label_11->show();
+    }
+    db->DBDisconnect(conn);
 }
 void ParametreCourant::extracthotels(){
     hoteldb *db = new hoteldb();
@@ -219,7 +231,7 @@ void ParametreCourant::on_pushButton_clicked()
 hoteldb *db = new hoteldb();
 QSqlDatabase conn = db->DBConnect();
 int idhotel = hotel::getHotelId(ui->comboBox->currentText());
-int id = personnel::getCinP(ui->userEdit->text());
+QString id = personnel::getCinP(ui->userEdit->text());
 bool rslt = personnel::ModifPersonnelHotel(id,idhotel);
 if(rslt){
     ui->lineEdit_2->setText(ui->comboBox->currentText());
